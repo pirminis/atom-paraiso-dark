@@ -1,13 +1,13 @@
 {
-  "name": "paraiso-dark",
+  "name": "paraiso-dark-tuned",
   "theme": "syntax",
   "version": "2.0.0",
   "description": "A color scheme inspired by the colorful illustrations by Brazilian artist Rubens LP",
-  "repository": "https://github.com/idleberg/atom-paraiso-dark",
+  "repository": "https://github.com/pirminis/atom-paraiso-dark-tuned",
   "license": "CC-BY-SA 4.0",
   "author": {
-    "name": "Jan T. Sott",
-    "url": "http://github.com/idleberg"
+    "name": "Jonas Staškevičius",
+    "url": "http://github.com/pirminis"
   },
   "engines": {
     "atom": ">0.50.0"
