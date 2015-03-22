@@ -1,54 +1,63 @@
 @import "syntax-variables";
 
-.editor {
+atom-text-editor, // <- remove when Shadow DOM can't be disabled
+:host {
   color: @syntax-text-color;
   background-color: @syntax-background-color;
-}
 
-.editor .gutter {
-  color: @syntax-gutter-text-color;
-  background-color: @syntax-gutter-background-color;
-}
+  .gutter {
+    color: @syntax-gutter-text-color;
+    background-color: @syntax-gutter-background-color;
+  }
 
-.editor .gutter .line-number.cursor-line {
-  color: @syntax-gutter-text-color-selected;
-  background-color: @syntax-gutter-background-color-selected;
-}
+  .gutter .line-number.cursor-line {
+    color: @syntax-gutter-text-color-selected;
+    background-color: @syntax-gutter-background-color-selected;
+  }
 
-.editor .gutter .line-number.cursor-line-no-selection {
-  color: @syntax-gutter-text-color-selected;
-}
+  .gutter .line-number.cursor-line-no-selection {
+    color: @syntax-gutter-text-color-selected;
+  }
 
-.editor .wrap-guide {
-  color: @syntax-wrap-guide-color;
-  opacity: 0.05;
-}
+  .wrap-guide {
+    color: @syntax-wrap-guide-color;
+    opacity: 0.05;
+  }
 
-.editor .indent-guide {
-  color: @syntax-indent-guide-color;
-  opacity: 0.05;
-}
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+    opacity: 0.05;
+  }
 
-.editor .invisible-character {
-  color: @syntax-invisible-character-color;
-  opacity: 0.05;
-}
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+    opacity: 0.05;
+  }
 
-.editor .search-results .marker .region {
-  background-color: transparent;
-  border: @syntax-result-marker-color;
-}
+  .search-results .marker .region {
+    background-color: transparent;
+    border: @syntax-result-marker-color;
+  }
 
-.editor .search-results .marker.current-result .region {
-  border: @syntax-result-marker-color-selected;
-}
+  .search-results .marker.current-result .region {
+    border: @syntax-result-marker-color-selected;
+  }
 
-.editor.is-focused .cursor {
-  border-color: @syntax-cursor-color;
-}
+  .is-focused .cursor {
+    border-color: @syntax-cursor-color;
+  }
 
-.editor.is-focused .selection .region {
-  background-color: @syntax-selection-color;
+  .is-focused .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
 }
 
 .variable.parameter.function {
