@@ -1,7 +1,7 @@
 {
   "name": "paraiso-dark-tuned",
   "theme": "syntax",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Paraiso dark theme with low contrast invisibles and lack of line highlight",
   "repository": "https://github.com/pirminis/atom-paraiso-dark-tuned",
   "license": "CC-BY-SA 4.0",
