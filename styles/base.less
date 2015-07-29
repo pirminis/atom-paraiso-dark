@@ -2,7 +2,6 @@
 // Base16 scheme and Base16 Builder by Chris Kempson (https://github.com/chriskempson)
 
 @import "syntax-variables.less";
-@import "mixins.less";
 atom-text-editor,
 :host {
   color: @syntax-text-color;
@@ -23,17 +22,17 @@ atom-text-editor,
 
   .wrap-guide {
     color: @syntax-wrap-guide-color;
-    .Invisibles();
+    opacity: 0.05;
   }
 
   .indent-guide {
     color: @syntax-indent-guide-color;
-    .Invisibles();
+    opacity: 0.05;
   }
 
   .invisible-character {
     color: @syntax-invisible-character-color;
-    .Invisibles();
+    opacity: 0.05;
   }
 
   .search-results .marker .region {
@@ -54,8 +53,7 @@ atom-text-editor,
   }
 
   .line-number.cursor-line-no-selection, .line.cursor-line {
-    background-color: rgba(80, 80, 80, 0.33);
-    .TransparentBackground();
+    background-color: transparent;
   }
 }
 
