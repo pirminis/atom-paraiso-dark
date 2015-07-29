@@ -1,10 +1,12 @@
-@import "syntax-variables";
+// Atom template by Jan T. Sott (https://github.com/idleberg/)
+// Base16 scheme and Base16 Builder by Chris Kempson (https://github.com/chriskempson)
 
-atom-text-editor, // <- remove when Shadow DOM can't be disabled
+@import "syntax-variables.less";
+@import "mixins.less";
+atom-text-editor,
 :host {
   color: @syntax-text-color;
   background-color: @syntax-background-color;
-
   .gutter {
     color: @syntax-gutter-text-color;
     background-color: @syntax-gutter-background-color;
@@ -21,17 +23,17 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
 
   .wrap-guide {
     color: @syntax-wrap-guide-color;
-    opacity: 0.05;
+    .Invisibles();
   }
 
   .indent-guide {
     color: @syntax-indent-guide-color;
-    opacity: 0.05;
+    .Invisibles();
   }
 
   .invisible-character {
     color: @syntax-invisible-character-color;
-    opacity: 0.05;
+    .Invisibles();
   }
 
   .search-results .marker .region {
@@ -43,14 +45,6 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
     border: @syntax-result-marker-color-selected;
   }
 
-  .is-focused .cursor {
-    border-color: @syntax-cursor-color;
-  }
-
-  .is-focused .selection .region {
-    background-color: @syntax-selection-color;
-  }
-
   .cursor {
     border-color: @syntax-cursor-color;
   }
@@ -58,6 +52,12 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
   .selection .region {
     background-color: @syntax-selection-color;
   }
+
+  .line-number.cursor-line-no-selection, .line.cursor-line {
+    background-color: rgba(80, 80, 80, 0.33);
+  }
+
+>>>>>>> upstream/master:styles/base.less
 }
 
 .variable.parameter.function {
@@ -80,7 +80,7 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
   color: #a39e9b;
 }
 
-.keyword, .keyword.control {
+.keyword {
   color: #815ba4;
 }
 
@@ -92,8 +92,12 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
   color: #06b6ef;
 }
 
-.meta.class, .support.class, .entity.name.class, .entity.name.type.class {
-  color: #f6e60d;
+.support.class, .entity.name.class, .entity.name.type.class {
+  color: #fec418;
+}
+
+.meta.class {
+  color: #e7e9db;
 }
 
 .keyword.other.special-method {
@@ -158,7 +162,7 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
 
 .markup.bold, .punctuation.definition.bold {
   font-weight: bold;
-  color: #f6e60d;
+  color: #fec418;
 }
 
 .markup.italic, .punctuation.definition.italic {
@@ -216,7 +220,7 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
 }
 
 .punctuation.section.embedded, .variable.interpolation {
-  color: #9ec931;
+  color: #e96ba8;
 }
 
 .invalid.illegal {
